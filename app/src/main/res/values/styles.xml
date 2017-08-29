@@ -1,0 +1,45 @@
+<resources>
+
+    <style name="Theme.MyTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:spinnerDropDownItemStyle">@style/SpinnerAppTheme</item>
+        <item name="android:popupMenuStyle">@style/Theme.MenuPopup</item>
+
+    </style>
+
+    <style name="Theme.CalendarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:background">@color/white_color</item>
+        <item name="android:textColor">@color/black_color</item>
+    </style>
+
+    <style name="Theme.MenuPopup" parent="Base.Widget.AppCompat.PopupMenu">
+        <item name="android:background">@color/white_color</item>
+        <item name="android:textColor">@color/black_color</item>
+    </style>
+
+    <style name="Theme.Commitment" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorPrimary">@color/white_color</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/white_color</item>
+        <item name="android:textColor">@color/white_color</item>
+
+    </style>
+
+    <style name="SpinnerAppTheme" parent="Base.Widget.AppCompat.DropDownItem.Spinner">
+        <item name="android:background">@color/white_color</item>
+        <item name="android:textColor">@color/black_color</item>
+        <item name="android:dropDownSelector">@color/black_color</item>
+        <item name="android:prompt">@color/white_color</item>
+    </style>
+
+    <style name="Theme.MyTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.MyTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+</resources>

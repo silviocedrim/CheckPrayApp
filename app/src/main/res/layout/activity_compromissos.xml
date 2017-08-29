@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        android:orientation="vertical"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/toolbar_height"
+            app:layout_collapseMode="pin"
+            android:layout_marginBottom="@dimen/small_padding">
+
+            <RelativeLayout
+                android:id="@+id/date_picker_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="40sp" />
+
+                <TextView
+                    android:id="@+id/txt_subTitleToolBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_below="@+id/txt_title"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="20sp" />
+
+               <!-- <TextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginRight="@dimen/small_padding"
+                    android:layout_marginTop="@dimen/menu_margin_top"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textSize="15sp" />-->
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/ripple_effect"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="@dimen/small_padding"
+                    android:layout_marginTop="@dimen/very_small_padding"
+                    rv_centered="true">
+                    <Button
+                        android:id="@+id/bntRelatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:background="@null"
+                        android:text="@string/button_month_report" />
+
+                </com.andexert.library.RippleView>
+
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+            <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+                android:id="@+id/calendar"
+                style="@style/Theme.CalendarTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/toolbar"
+                app:mcv_calendarMode="month"
+                app:mcv_weekDayTextAppearance="@style/Theme.CalendarTheme"
+                android:layout_alignParentBottom="true" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:foregroundTint="@android:color/white"
+        app:srcCompat="@drawable/ic_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/fab_margin"
+        app:layout_anchor="@id/calendar"
+        app:layout_anchorGravity="bottom|end" />
+
+</android.support.design.widget.CoordinatorLayout>

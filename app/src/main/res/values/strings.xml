@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">CheckPrayApp</string>
+
+
+    <!---Tela de Login-->
+    <string name="edt_username">Email</string>
+    <string name="edt_name">Nome</string>
+    <string name="edt_password">Senha</string>
+    <string name="bnt_login">Entrar</string>
+    <string name="bnt_cadastrar">Cadastrar</string>
+    <string name="link_alterar_grau_pertenca">Clique para alterar</string>
+    <string name="link_grau_pertenca">Clique para escolher</string>
+    <string name="link_cadastrar">Clique aqui para se cadastrar</string>
+    <string name="tela_cadastro">Cadastro</string>
+    <string name="spinner_grau_pertenca">Grau de Pertença</string>
+
+    <string name="welcome">Bem vindo(a), </string>
+
+    <string name="language">pt</string>
+    <string name="locale">BR</string>
+
+    <string name="commitment">Compromissos</string>
+    <string name="commitment_today">Diários</string>
+    <string name="commitment_week">Semanais</string>
+    <string name="commitment_month">Mensais</string>
+
+    <string name="bnt_save">Salvar</string>
+    <string name="bnt_cancel">Cancelar</string>
+    <string name="all">Todos</string>
+
+    <string name="terco">Terço Mariano</string>
+    <string name="misericordia">Terço da Misericórdia</string>
+    <string name="oracao">Oração Pessoal</string>
+    <string name="diario">Diário Espiritual</string>
+
+    <string name="missa_domingo">Missa Domigo</string>
+    <string name="missa_semana">Missa Semana</string>
+    <string name="jejum">Jejum</string>
+    <string name="grupo_oracao">Grupo de Oração</string>
+    <string name="adoracao">Adoração</string>
+
+    <string name="confissao">Confissão</string>
+    <string name="formacao">Formação Comunitária</string>
+    <string name="title_activity_calendar">CalendarActivity</string>
+
+    <string-array name="grau_pertenca">
+        <item>Grau de Pertença</item>
+        <item>Irmão</item>
+        <item>Vocacionado</item>
+        <item>Missionário</item>
+        <item>Consagrado</item>
+    </string-array>
+
+    <string name="button_month_report">RELATÓRIO DO MÊS</string>
+
+    <!--Menus-->
+    <string name="menu_today">Hoje</string>
+    <string name="menu_logout">Sair</string>
+
+</resources>
+
+
