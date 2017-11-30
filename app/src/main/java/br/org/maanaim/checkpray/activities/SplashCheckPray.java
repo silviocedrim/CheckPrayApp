@@ -1,22 +1,14 @@
 package br.org.maanaim.checkpray.activities;
 
-import android.content.Context;
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
-import android.util.AttributeSet;
-import android.util.SparseLongArray;
-import android.view.View;
-import android.widget.ProgressBar;
 
 import br.org.maanaim.checkpray.R;
 import br.org.maanaim.checkpray.SharedPreference.MySaveSharedPreference;
-import br.org.maanaim.checkpray.bean.Compromisso;
 import br.org.maanaim.checkpray.fragments.SplashCheckPrayFragment;
 import br.org.maanaim.checkpray.interfaces.Splash;
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class SplashCheckPray extends AppCompatActivity implements Splash {

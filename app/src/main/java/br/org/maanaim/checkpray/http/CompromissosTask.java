@@ -26,8 +26,6 @@ public class CompromissosTask extends AsyncTaskLoader<List<Compromisso>> {
     @Override
     protected void onStartLoading() {
         super.onStartLoading();
-//        if(mQuery == null) return;
-
         if(mCompromissos == null){
             forceLoad();
         }else{

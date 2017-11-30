@@ -1,5 +1,7 @@
 package br.org.maanaim.checkpray.bean;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 
 /**
@@ -16,6 +18,7 @@ public class Usuario implements Serializable {
 
     String senha;
 
+    @SerializedName("grau_pertenca")
     String grauPertenca;
 
     boolean ativo;

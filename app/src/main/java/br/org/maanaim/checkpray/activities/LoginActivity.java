@@ -11,26 +11,21 @@ import android.widget.Toast;
 
 import java.util.Calendar;
 
-import br.com.simplepass.loading_button_lib.customViews.CircularProgressButton;
 import br.org.maanaim.checkpray.R;
 import br.org.maanaim.checkpray.SharedPreference.MySaveSharedPreference;
 import br.org.maanaim.checkpray.bean.Usuario;
-import br.org.maanaim.checkpray.db.CompromissosDAO;
 import br.org.maanaim.checkpray.db.UsuarioDAO;
 import br.org.maanaim.checkpray.http.DBServConnect;
 import br.org.maanaim.checkpray.util.Constantes;
+import br.org.maanaim.checkpray.util.DialogProgresso;
 import br.org.maanaim.checkpray.util.Validator;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class LoginActivity extends AppCompatActivity {
 
-
     @BindView(R.id.bntLogin)
-    CircularProgressButton mBntLogin;
-
-    @BindView(R.id.link_cadastrar)
-    View mLinkCadastrar;
+    Button mBntLogin;
 
     @BindView(R.id.edt_email)
     EditText mEdtEmail;
@@ -41,6 +36,8 @@ public class LoginActivity extends AppCompatActivity {
     UsuarioDAO mDAO;
 
     Usuario usuario;
+
+    DialogProgresso pDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
 
         mBntLogin.setOnClickListener(new BotaoLogin());
 
-        mLinkCadastrar.setOnClickListener(new LinkCadastrar());
+        pDialog = new DialogProgresso(this);
     }
 
     @Override
@@ -76,7 +73,8 @@ public class LoginActivity extends AppCompatActivity {
 
         @Override
         protected void onPreExecute() {
-            mBntLogin.startAnimation();
+            pDialog.setMessage("Carregando... aguarde!");
+            pDialog.showDialog();
         }
 
         @Override
@@ -102,7 +100,6 @@ public class LoginActivity extends AppCompatActivity {
 
                 Intent it = new Intent(LoginActivity.this, CompromissosActivity.class);
                 startActivity(it);
-                mBntLogin.stopAnimation();
 
             }else{
                 Toast.makeText(LoginActivity.this, "Email ou senha inválidos!", Toast.LENGTH_LONG).show();
@@ -115,6 +112,7 @@ public class LoginActivity extends AppCompatActivity {
                 mEdtSenha.setFocusable(true);
                 mEdtSenha.requestFocus();
             }
+            pDialog.hideDialog();
         }
     }
 
@@ -144,15 +142,5 @@ public class LoginActivity extends AppCompatActivity {
 
         }
 
-    }
-
-
-
-    class LinkCadastrar implements View.OnClickListener {
-        @Override
-        public void onClick(View view) {
-            Intent it = new Intent(LoginActivity.this, CadastroUsuarioActivity.class);
-            startActivityForResult(it, Constantes.CADASTRAR_USUARIO);
-        }
     }
 }

@@ -53,7 +53,7 @@
                 android:textColorHint="@color/input_login_hint" />
 
 
-            <!--<Button
+            <Button
                 android:id="@+id/bntLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -62,25 +62,9 @@
                 android:text="@string/bnt_login"
                 android:textAllCaps="false"
                 android:textColor="#fff"
-                android:textSize="18sp" />-->
+                android:textSize="@dimen/text_medium" />
 
-            <br.com.simplepass.loading_button_lib.customViews.CircularProgressButton
-                android:id="@+id/bntLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/medium_padding"
-                android:background="@drawable/button_border_shape"
-                android:text="@string/bnt_login"
-                android:textAllCaps="false"
-                android:textColor="#fff"
-                android:textSize="18sp"
-                app:finalCornerAngle="50dp"
-                app:initialCornerAngle="0dp"
-                app:spinning_bar_color="@color/white_color"
-                app:spinning_bar_padding="0dp"
-                app:spinning_bar_width="3dp" />
-
-            <Button
+           <!--<Button
                 android:id="@+id/link_cadastrar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -89,24 +73,13 @@
                 android:text="@string/link_cadastrar"
                 android:textAllCaps="false"
                 android:textColor="@color/link_register"
-                android:textSize="14sp" />
+                android:textSize="@dimen/text_medium" />-->
 
 
         </LinearLayout>
     </RelativeLayout>
 
 
-    <!-- <ImageButton
-         android:id="@+id/logo_photo"
-         android:layout_width="100dp"
-         android:layout_height="100dp"
-         android:layout_marginTop="110dp"
-         android:background="@drawable/logo_image_background"
-         android:elevation="4dp"
-         android:scaleType="centerCrop"
-         android:layout_alignParentTop="true"
-         android:layout_centerHorizontal="true"
-         app:srcCompat="@drawable/ic_marca"/>
- -->
+
 
 </RelativeLayout>

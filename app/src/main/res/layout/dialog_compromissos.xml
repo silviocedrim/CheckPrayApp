@@ -22,7 +22,7 @@
                 android:layout_height="wrap_content"
                 android:background="@color/colorPrimary"
                 android:text="@string/commitment"
-                android:textSize="20sp" />
+                android:textSize="@dimen/text_large" />
 
             <TextView
                 android:id="@+id/txt_data_compromissos"

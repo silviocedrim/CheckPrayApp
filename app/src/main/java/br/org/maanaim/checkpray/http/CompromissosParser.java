@@ -4,11 +4,11 @@ import com.google.gson.Gson;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.util.ArrayList;
 import java.util.List;
 
 import br.org.maanaim.checkpray.bean.Compromisso;
 import br.org.maanaim.checkpray.bean.ListCompromissos;
+import br.org.maanaim.checkpray.util.Constantes;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -20,7 +20,7 @@ import okhttp3.Response;
 
 public class CompromissosParser {
 
-    public static final String URL_SEARCH = "http://www.comunidademaanaim.org.br/compromissos.json";
+
 
     public static List<Compromisso> search() throws IOException {
         Response response = null;
@@ -28,7 +28,7 @@ public class CompromissosParser {
         OkHttpClient client = new OkHttpClient();
 
         Request request = new Request.Builder()
-                .url(URL_SEARCH)
+                .url(Constantes.URL_SEARCH_COMPROMISSOS)
                 .build();
 
         response = client.newCall(request).execute();

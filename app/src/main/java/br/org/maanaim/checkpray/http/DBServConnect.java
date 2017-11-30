@@ -5,15 +5,13 @@ import com.google.gson.Gson;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 
-import br.org.maanaim.checkpray.bean.ListCompromissos;
 import br.org.maanaim.checkpray.bean.Usuario;
+import br.org.maanaim.checkpray.util.Constantes;
 import okhttp3.FormBody;
-import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-import okio.BufferedSink;
 
 /**
  * Created by Silvinho Cedrim on 07/08/2017.
@@ -21,9 +19,6 @@ import okio.BufferedSink;
 
 public class DBServConnect {
 
-    public static final String URL_DB_LOGIN = "http://comunidademaanaim.org.br/db_connect/login.php";
-
-    public static final String URL_DB_CADASTRO = "http://comunidademaanaim.org.br/db_connect/cadastro.php";
 
 
     public static Usuario login(Usuario usuario){
@@ -42,7 +37,7 @@ public class DBServConnect {
 
 
             Request request = new Request.Builder()
-                    .url(URL_DB_LOGIN)
+                    .url(Constantes.URL_PREFIXO + Constantes.URL_DB_LOGIN)
                     .post(body)
                     .build();
 
@@ -82,7 +77,7 @@ public class DBServConnect {
 
 
             Request request = new Request.Builder()
-                    .url(URL_DB_CADASTRO)
+                    .url(Constantes.URL_PREFIXO + Constantes.URL_DB_CADASTRO)
                     .post(body)
                     .build();
 
